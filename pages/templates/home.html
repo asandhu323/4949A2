@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- This form references the homePost route. -->
+<form action="{% url 'homePost' %}" method="post">
+{% csrf_token %}
+<div class="questions">
+<h3>Education</h3>
+<input type="radio" name="education" id="education1" value="1">
+<label for="education1">Graduate</label><br>
+<input type="radio" name="education" id="education0" value="0">
+<label for="education0">Not Graduate</label><br>
+
+    <h3>Credit History</h3>
+    <b>Does your credit history meet the guidelines?</b><br>
+<input type="radio" name="credit" id="credit1" value="1">
+<label for="credit1">Yes</label><br>
+<input type="radio" name="credit" id="credit0" value="0">
+<label for="credit0">No</label><br>
+
+    <h3>Married</h3>
+<input type="radio" name="married" id="married1" value="1">
+<label for="married1">Yes</label><br>
+<input type="radio" name="married" id="married0" value="0">
+<label for="married0">No</label><br>
+
+<h3>Co-applicant Income</h3>
+<b>Enter 0 if you are the only applicant</b><br>
+<input type="text" id="co_inc" name="co_inc"><br><br>
+
+        <h3>Property Area</h3>
+<input type="radio" name="prop" id="prop0" value="0">
+<label for="prop0">Rural</label><br>
+<input type="radio" name="prop" id="prop1" value="1">
+<label for="prop1">Urban</label><br>
+    <input type="radio" name="prop" id="prop2" value="2">
+<label for="prop2">Semiurban</label><br>
+</div>
+<!—Submit button is also contained in the form -->
+    <div class="button">
+        <button type="submit" class="btn btn-info"><b>SEE RESULTS</b></button>
+    </div>
+</form>
+<!-- End of form. -->
+<!-- This error will notify the user if there are issues with the POST request -->
+{% if errorMessage %}<p><strong>{{errorMessage}}</strong></p>{% endif %}
+{% endblock content %}

@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet"
+href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+crossorigin="anonymous">
+    <style type="text/css">
+        body {
+  background-color: teal;
+            padding: 20px;
+}
+        button {
+            margin-top: 25px;
+        }
+        h3 {
+            margin-top: 10px;
+        }
+        .button {
+            text-align: center;
+        }
+        .questions {
+            padding-left: 25px;
+        }
+        .body {
+            margin: 0 auto;
+  background-color: white;
+            width: fit-content;
+  border-radius: 10px;
+  padding: 30px;
+}
+        img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+            margin-bottom: 25px;
+            margin-top: 25px;
+}
+    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>{% block title %}Loan Approval{% endblock %}</title>
+</head>
+<body>
+<div class="body">
+<a href="{% url 'home' %}">Home</a>
+<h1>Loan Approval Prediction Model</h1>
+<img src="https://www.smbceo.com/wp-content/uploads/2016/12/small-business-loan.jpg" alt="Small Business Loan">
+{% block content %} {% endblock content %}
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+crossorigin="anonymous"></script>
+</body>
+</html>
